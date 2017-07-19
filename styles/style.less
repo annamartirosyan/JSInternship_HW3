@@ -1,0 +1,276 @@
+//------Variables 
+
+//Colors
+@bodycolor: #eee;
+@textcolor: rgb(51, 51, 51);
+@fb_blue: #3B5998;
+@linktop: #9CB4D8;
+@bordercolor: rgb(29, 42, 91);
+@links: #365899;
+// Sizes
+@margin: 184.5px;
+// Fonts
+@font-weight: bold; 
+
+//------Mixins
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+// ------------------
+
+body { 
+	background-color: #edf0f5;
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    overflow: scroll;
+}
+a {
+	color: @links;
+}
+.header {
+	height: 82px;
+	background-color: @fb_blue;
+	color: #fff;
+	padding-top: 13px;
+		
+		.logo{
+				h1{
+				background-image: url(../img/facebook_logo.png);
+				background-repeat: no-repeat;
+				height: 35px;
+				margin-top: 17px;
+				margin-left: 171px;
+				}
+		}
+		.login{
+				table{
+					margin-left: 84px;
+					margin-right: @margin;
+						a{
+							color: @linktop;
+							margin-left: 14px;
+							padding-top: 4px; 
+						}
+								
+														
+						tr{
+							font-size: 12px;
+
+								.text {
+									padding-left: 15px;
+									padding-bottom: 5px;
+								}
+
+								.log input {
+									border: 1px solid @bordercolor;
+									padding: 3px 3px 4px 3px;
+									margin-left: 14px;
+									margin-bottom: 3px;	
+									.size(150px; 23px;)
+								}
+								.logbtn input {
+									background-color: #4267b2;
+									border: 1px solid rgb(41, 72, 125);
+									line-height: 18px;
+									font-weight: @font-weight;
+									padding: 2px 6px;
+									margin-left: 14px;
+									margin-bottom: 3px;
+									.size(50px; 24px); 
+										&:hover {
+											background-color: rgb(41, 72, 125);
+										}	
+								}
+						}
+				}
+		}
+}
+
+.content {
+	font-family: inherit;
+	margin: 0 160px;
+		.leftside {
+			// margin-left: 160px;
+			font-size: 17px;
+			h2{
+				font-weight: @font-weight;
+				font-size: 28px;
+				color: @textcolor;
+				padding: 42px 0 24px;
+			}
+			span {
+				font-weight: @font-weight;
+				margin-left: 10px;
+				small {
+					font-weight: normal;
+					margin-left: 5px;
+				}
+			}
+			.info {
+				margin-top: 20px;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				text-align: left;
+				display: block;
+
+			}
+			#share {
+				margin-left: 20px;
+			}
+			#see {
+				margin-left: 17px;
+			}
+
+		}
+		.rightside {
+			padding-left: 86px;
+			float: left;
+			h2 {
+				font-size: 36px;
+				font-weight: @font-weight; 
+			}
+			.free {
+				font-size: 19px;
+				line-height: 23.94px;
+				margin-bottom:20px;
+			}
+			.short input {
+				border: 1px solid rgb(189, 199, 216);
+				border-radius: 5px;
+				font-size: 18px;
+				padding: 8px 10px;
+				margin-bottom: 10px;
+				margin-left: 10px;
+				.size (194px; 39px)
+			}
+			.long input{
+				border: 1px solid rgb(189, 199, 216);
+				border-radius: 5px;
+				font-size: 18px;
+				padding: 8px 10px;
+				margin-bottom: 10px;
+				margin-left: 10px;
+				.size(401px; 39px)
+			}
+			#birthday {
+				font-size: 18px;
+				font-weight: normal;
+				margin: 10px 0 5px 3px;
+			}
+			.date {
+				position: relative;
+				margin-left: 5px;
+				button {
+					border-radius: 0px;
+					font-size: 13px;
+					margin-left: -5px;
+					padding: 5px;
+					margin-bottom: -5px;
+					.size(71px; 30px)
+				}
+				.why {
+					position: absolute;
+					top: 0;
+					left: 215px;
+					font-size: 11px;
+					font-weight: normal;
+					width: 30%;
+					padding: 0;
+					margin-bottom: 0;
+				}
+			}
+			.radio {
+				margin-left: 10px;
+				font-weight: bolder;
+			}
+			.create {
+				font-size: 11px;
+				color: rgb(119, 119, 119);
+				display: block;
+				width: 80%;
+				line-height:14.74px;
+				margin-bottom:11px;
+				margin-left: 3px;
+			}
+			.btn-success {
+				background-color: #578843;
+				color: #fff;
+				font-size: 19px;
+			    padding: 7px 20px;
+			    margin-left: 17px;
+			    margin-bottom: -20px;
+				border: 1px solid #2c5115;
+				width: 194px;
+				height: 39px;
+					&:hover {
+						background-color: rgb(105, 167, 78);
+
+					}
+			}
+			#createpage {
+				font-size: 13px;
+				color: #666;
+				font-weight: @font-weight;
+				padding-top: 15px;
+				padding-bottom: 20px;
+				border-top: 1px solid #dddfe2;
+			}
+
+		}
+
+}
+.footer {
+	// margin: 0 @margin;
+	background-color: #fff;
+		ul {
+			list-style-type: none;
+			direction: ltr;
+			display: block;
+			vertical-align: top;
+			font-size: 12px;
+			// margin-left: 70px;
+			li {
+				display: inline-block;
+				margin-top: 10px;
+				margin-left: 15px;
+
+			}
+		}
+		#plus button {
+			font-weight: @font-weight;
+			font-size: 12px;
+			padding-bottom: 3px;
+			padding-top: 1px;
+			.size(28px; 20px);
+		}
+		.border {
+			border-top: 1px solid #dddfe2;
+			margin: 5px 200px 0 40px;
+
+		}
+		.fetures {
+			font-size: 12px;
+			padding-left: 10px;
+
+		}
+		table{
+			margin-left: -70px;
+			td{
+				padding-top: 5px;
+				padding-right: 20px;
+			}
+		}
+		.copyrights{
+			font-size: 11px;
+			margin-top: 20px;
+			color: @textcolor;
+			margin-left: -70px;
+
+		}
+} 
+
+
